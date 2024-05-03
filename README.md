@@ -1,4 +1,3 @@
-```markdown
 # FastAPI Blueprint
 
 FastAPI Blueprint is a comprehensive blueprint project designed to accelerate your development process and get you up and running with a production-grade FastAPI application in no time. Whether you're a seasoned developer or just starting out, this project provides a solid foundation packed with essential features and configurations.
