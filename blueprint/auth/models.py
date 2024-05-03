@@ -6,6 +6,7 @@ from blueprint.common.database import AuditMixin, Base
 
 class Role(Base):
     __tablename__ = "role"
+
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=True, index=True)
     permissions = relationship("Permission", secondary="role_permission", back_populates="roles")
@@ -14,6 +15,7 @@ class Role(Base):
 
 class Permission(Base):
     __tablename__ = "permission"
+
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=True, index=True)
     description = Column(String)
@@ -22,6 +24,7 @@ class Permission(Base):
 
 class RolePermission(Base):
     __tablename__ = "role_permission"
+
     id = Column(Integer, primary_key=True)
     role_id = Column(ForeignKey("role.id", ondelete="CASCADE"))
     permission_id = Column(ForeignKey("permission.id", ondelete="CASCADE"))
